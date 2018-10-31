@@ -16,6 +16,9 @@ class Admin
 	public static function getOne($id){
 	    return \app\common\model\Admin::where(['id'=>$id])->find();
 	}
+	public static function login( string $login,string $pwd){
+	    return \app\common\model\Admin::where(['login'=>$login,'pwd'=>$pwd])->find();
+	}
 	public static function delOne($id){
 	    return \app\common\model\Admin::where(['id'=>$id])->delete();
 	}
