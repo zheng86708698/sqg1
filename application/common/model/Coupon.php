@@ -1,6 +1,6 @@
 <?php
 namespace app\common\model;
-class MemberCoupon extends Base{
+class Coupon extends Base{
 	public function memberCoupon(){
 	    return $this->hasMany("MemberCoupon","couponid");
 	}

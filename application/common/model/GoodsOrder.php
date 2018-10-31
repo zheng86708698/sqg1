@@ -3,13 +3,13 @@ namespace app\common\model;
 class GoodsOrder extends Base{
 	
 	public function goodsOrderSpec(){
-	    return $this->hasMany("GoodsOrderSpec","orderid");
+	    return $this->belongsToMany("GoodsOrderSpec","orderid");
 	}
 	public function eval(){
 	    return $this->hasOne("Eval","orderid");
 	}
 	public function goodsOrderGoods(){
-	    return $this->hasMany("GoodsOrderGoods","orderid");
+	    return $this->belongsToMany("GoodsOrderGoods","orderid");
 	}
 	public function member(){
 		return $this->belongsTo("Member","memberid");

@@ -1,6 +1,6 @@
 <?php
 namespace app\common\model;
-class MemberFeeLog extends Base{
+class AdminLog extends Base{
 	
 	public function admin(){
 	    return $this->belongsTo("Admin","adminid");
